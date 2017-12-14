@@ -1,0 +1,107 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="styles/main.css?v1">
+<link rel="stylesheet" type="text/css" href="styles/selection.css?v1">
+<link rel="stylesheet" type="text/css" href="styles/timer.css?v1">
+<head>
+<title>
+OLL trainer
+</title>
+</head>
+<body class="niceBody" id="bodyid">
+	<div class="practice_layout">
+	<table id="mainTable">
+		<tr>
+			<td id="casesBox" colspan="2">
+			</td>
+		</tr>
+		<tr>
+			<td id="scramble" colspan="2">
+                        (scramble will be there)
+			</td>
+		</tr>
+		
+		<tr>
+			<td id="timer" style="height: 100%;">
+				loading, please wait...
+			</td>
+			<td id="stats">
+                <div class="resultInfoHeader"><span id='infoHeader'></span>times (<a onclick="confirmClear();">clear</a>):</div>
+				<div id="times">
+                </div>
+			</td>
+		</tr>
+        <!-- case description box -->	
+		<tr>
+			<td colspan="2">
+				<a onclick="adjustSize('timer', 8);">increase</a>/<a onclick="adjustSize('timer', -8);">decrease</a> timer size
+				<br><a onclick="adjustSize('scramble', 5);">increase</a>/<a onclick="adjustSize('scramble', -5);">decrease</a> scramble size
+				<br>
+                colors (<a onclick='resetStyle(0)'>light</a>, <a onclick='resetStyle(1)'>dark</a>):
+                background <input type='text' value='#f5f5f5' class='settinginput' id='bgcolor_in' onchange="applystyle();" placeholder='#f5f5f5' maxlength='12'/>
+              , text <input type='text' value='black' class='settinginput' id='textcolor_in' onchange="applystyle();"  placeholder='#000' maxlength='12'/>
+              , links <input type='text' value='#004411' class='settinginput' id='linkscolor_in' onchange="applystyle();"  placeholder='#004411' maxlength='12'/>
+              <br>
+			<span id="last_scramble">
+			Any questions/suggestions/bugs reports - post in <a href="https://www.speedsolving.com/forum/threads/oll-trainer.66924/" target="_blank" class="settings">this thread</a>
+			</span>
+			</td>
+		</tr>
+	</table>
+    </div> <!-- practice_layout -->
+
+<!-- hint box -->
+    <div id="hintWindow">
+        <table id='box'>
+            <tr>
+                <td rowspan='4'>
+                    <img id='boxImg'/>
+                </td>
+                <td id='boxTitle'>
+                </td>
+            </tr>
+            <tr>
+                <td id='boxalg'>
+                </td>
+            </tr>
+            <tr>
+                <td id='boxsetup'>
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div id="hintWindowBack" onclick='hideBox();'></div>
+
+	<div class="selection_layout">
+        <div>
+            <h1>OLL Trainer</h1>
+            <ul>
+                <li>Click on the picture to select / deselect the case</li>
+                <li>Click on the group header select / deselect all cases in the group</li>
+                <li>When you're ready, click Done button on the right to start practicing</li>
+                <li>Any questions/suggestions/bugs reports - please post in <a target="_blank" href='https://www.speedsolving.com/forum/threads/oll-trainer.66924/'>this thread</a></li>
+                <li>GitHub repo: <a href='https://github.com/Roman-/oll_trainer'>click</a>, download offline version: <a href='https://github.com/Roman-/oll_trainer/archive/master.zip'>zip</a></li>
+            </ul>
+        </div>
+		<div id="cases_selection">
+		</div>
+        <a class='abutton' id='doneButton' onclick='changeMode(1)'>Done</a>
+	</div> <!-- selection layout -->
+
+</body>
+</html>
+<script src="scripts/algsinfo.js?v2"></script>
+<script src="scripts/algsmap.js?v2"></script>
+<script src="scripts/saveload.js?v4"></script>
+<script src="scripts/selection.js?v2"></script>
+<script src="scripts/timer.js?v3"></script>
+<script src="scripts/practice.js?v1"></script>
+<script>
+changeMode(0);
+</script>
+
+
+<script>
+
+
+</script>

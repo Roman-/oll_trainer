@@ -1,0 +1,69 @@
+.selection_layout
+{
+    display: none;
+}
+
+#sl {white-space: nowrap;}
+
+table.olllayout {
+    /*width: 100%;*/
+}
+td.itemUnsel {
+    cursor: pointer;
+    text-align: center;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+    background-color: none;
+}
+
+td.itemSel {
+    cursor: pointer;
+    text-align: center;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+    background-color: yellow;
+    color: black;
+}
+
+td.ollgrouptdSel {
+    cursor: pointer;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+    background-color: yellow;
+    color: black;
+    border-bottom: 2px solid white;
+}
+
+td.ollgrouptdUnsel {
+    cursor: pointer;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+    background-color: none;
+    border-bottom: 2px solid;
+}
+
+#doneButton{
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    font-size: 30px;
+}
+
+a.settings {
+    text-decoration: underline;
+    color: #004411;
+    cursor: pointer;
+}
+
+td {border: 1px solid #000;}
+
+/* done button that appends ">" on hover */
+.abutton {
+  display: inline-block; border-radius: 2px; background-color: #95a5a6; border: none; color: #FFFFFF; text-align: center; font-size: 18px; padding: 10px; transition: all 0.3s; cursor: pointer; margin: 5px;}
+.abutton span { cursor: pointer; display: inline-block; position: relative; transition: 0.3s;}
+.abutton span:after {content: '»'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.3s;}
+.abutton:hover span { padding-right: 25px;}
+.abutton:hover {background-color: #74898b;}
+.abutton:hover span:after {opacity: 1; right: 0;}
+
+/* blue button change color on hover */
+.dbutton {
+  display: inline-block; border-radius: 2px; background-color: #95a5a6; border: none; color: #FFFFFF; text-align: center; font-size: 18px; padding: 10px; transition: all 0.3s; cursor: pointer; margin: 5px;}
+.dbutton:hover {background-color: #74898b;}	
+

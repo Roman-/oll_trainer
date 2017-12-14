@@ -1,0 +1,15 @@
+﻿body.niceBody {
+    background-color: #f5f5f5;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+img {
+    pointer-events: none;
+}
+
+a, a:not([href]), a:visited {
+    text-decoration: underline;
+    cursor: pointer;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+}
