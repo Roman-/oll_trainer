@@ -3,6 +3,9 @@
 loadSelection();
 renderSelection();
 
+function updateTitle() {
+    document.getElementById("csi").innerHTML = window.selCases.length;
+}
 function itemClicked(i) {
     if (window.ollMap[i] == null) {
         console.error("is null");
@@ -18,7 +21,7 @@ function itemClicked(i) {
 
     document.getElementById("itemTd" + i).className = wasSelected ? "itemUnsel" : "itemSel" ;
     saveSelection();
-    document.getElementById("doneButton").innerHTML = "Done (" +window.selCases.length+")" ;
+    updateTitle();
 }
 
 function selectAllNone() {
@@ -111,7 +114,7 @@ function renderSelection()
 
     s += "<table class='olllayout'>";
     //s += "<tr><a onclick='selectAllNone()'>select all or none</a>";
-    s += "<tr><td class='ollgrouptdUnsel' onclick='selectAllNone()' colspan='6'><b>All Cases (57)</b></td></tr>";
+    s += "<tr><td class='ollgrouptdUnsel' onclick='selectAllNone()' colspan='6'><b>All Cases (57)</b> | selected: <span id='csi'></span></td></tr>";
 
     s += makeTr42("P-Shapes", "T-Shapes");
     s += makeTr42("I-Shapes", "Squares");
@@ -125,7 +128,6 @@ function renderSelection()
 
     s += "</table>";
     document.getElementById("cases_selection").innerHTML = s;
-    document.getElementById("doneButton").innerHTML = "Done (" +window.selCases.length+")" ;
-
+    updateTitle();
 }
 

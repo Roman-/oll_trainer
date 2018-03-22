@@ -12,8 +12,10 @@ function showScramble()
 {
     window.allowStartingTimer = false;
     var s;
-    if (window.selCases.length == 0)
+    if (window.selCases.length == 0) {
         s = "click \"select cases\" above and pick some OLLs to practice";
+        document.getElementById("selInfo").innerHTML = "";
+    }
     else {
         s = "scramble: " + generateScramble();
         window.allowStartingTimer = true;
@@ -39,13 +41,35 @@ function confirmUnsel(i) {
     }
 }
 
+
+function displayPracticeInfo() {
+    var s = "";
+    if (window.recapArray.length == 0)
+        s += " | train mode: <b>" + window.selCases.length + "</b> cases selected";
+    else
+        s += " | recap mode: <b>" + window.recapArray.length + "</b> cases left";
+
+    document.getElementById("selInfo").innerHTML = s;
+}
+
 function generateScramble()
 {
     if (window.lastScramble != "")
         document.getElementById("last_scramble").innerHTML = "last scramble: " + window.lastScramble +
             " <span onclick='displayBox(event,"+lastCase+")' class='ollNameStats'>("+algsInfo[lastCase]["name"] + ") </span><a class='settings' onclick='confirmUnsel("+lastCase+")' style='color:"+document.getElementById( "linkscolor_in" ).value+";'>unselect</a>";
+    displayPracticeInfo();
     // get random case
-    var caseNum = randomElement(window.selCases);
+    var caseNum = 0;
+    if (recapArray.length == 0) { // train
+        caseNum = randomElement(window.selCases);
+    } else { // recap
+        // select the case
+        caseNum = randomElement(window.recapArray);
+        // remove it from the array
+        const index = window.recapArray.indexOf(caseNum);
+        window.recapArray.splice(index, 1);
+
+    }
     var alg = inverse_scramble(randomElement(window.ollMap[caseNum]));
     var rotation = randomElement(["", "y", "y2", "y'"]);
     var finalAlg = applyRotationForAlgorithm(alg, rotation);

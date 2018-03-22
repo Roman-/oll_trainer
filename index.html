@@ -1,8 +1,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-<link rel="stylesheet" type="text/css" href="styles/main.css?v1">
-<link rel="stylesheet" type="text/css" href="styles/selection.css?v1">
-<link rel="stylesheet" type="text/css" href="styles/timer.css?v1">
+<link rel="stylesheet" type="text/css" href="styles/main.css?v2">
+<link rel="stylesheet" type="text/css" href="styles/selection.css?v2">
+<link rel="stylesheet" type="text/css" href="styles/timer.css?v2">
 <head>
 <title>
 OLL trainer
@@ -13,6 +13,7 @@ OLL trainer
 	<table id="mainTable">
 		<tr>
 			<td id="casesBox" colspan="2">
+                <a id='selectBtn' onclick='changeMode(0)'>select cases</a><span id='selInfo'></span>
 			</td>
 		</tr>
 		<tr>
@@ -78,14 +79,17 @@ OLL trainer
             <ul>
                 <li>Click on the picture to select / deselect the case</li>
                 <li>Click on the group header select / deselect all cases in the group</li>
-                <li>When you're ready, click Done button on the right to start practicing</li>
+                <li>When you're ready, click Train or Recap button on the right to start practicing</li>
                 <li>Any questions/suggestions/bugs reports - please post in <a target="_blank" href='https://www.speedsolving.com/forum/threads/oll-trainer.66924/'>this thread</a></li>
                 <li>GitHub repo: <a href='https://github.com/Roman-/oll_trainer'>click</a>, download offline version: <a href='https://github.com/Roman-/oll_trainer/archive/master.zip'>zip</a></li>
             </ul>
         </div>
 		<div id="cases_selection">
 		</div>
-        <a class='abutton' id='doneButton' onclick='changeMode(1)'>Done</a>
+		<div class="btns-right">
+            <a class='abutton' id='doneButton' onclick='changeMode(1)' title='Train selected cases randomly'>Train</a> <br>
+            <a class='abutton' id='recapButton' onclick='changeMode(2)'title='Go through all the selected cases once'>Recap</a>
+		</div>
 	</div> <!-- selection layout -->
 
 </body>
@@ -93,9 +97,9 @@ OLL trainer
 <script src="scripts/algsinfo.js?v2"></script>
 <script src="scripts/algsmap.js?v2"></script>
 <script src="scripts/saveload.js?v4"></script>
-<script src="scripts/selection.js?v2"></script>
-<script src="scripts/timer.js?v3"></script>
-<script src="scripts/practice.js?v1"></script>
+<script src="scripts/selection.js?v3"></script>
+<script src="scripts/timer.js?v4"></script>
+<script src="scripts/practice.js?v2"></script>
 <script>
 changeMode(0);
 </script>
