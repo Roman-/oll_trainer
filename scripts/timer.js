@@ -382,6 +382,7 @@ function confirmClear()
 {
     if (confirm("Are you sure you want to clear session?")) {
         window.timesArray = [];
+        document.getElementById('infoHeader').innerHTML = ('')
         displayStats();
     }
 }
