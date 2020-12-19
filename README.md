@@ -1,5 +1,5 @@
 # OLL trainer
-## http://bestsiteever.ru/oll/
+## https://bestsiteever.ru/oll/
 
 The purpose of this project and its details are described on speedsolving forum in [this post](https://www.speedsolving.com/forum/threads/oll-trainer.66924/).  
 
