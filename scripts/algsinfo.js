@@ -11,7 +11,7 @@ var algsGroups = {
     "I-Shapes" : [51, 56, 52, 55],
     "Fish-Shapes" : [9, 10, 35, 37],
     "Knight Move Shapes" : [13, 14, 15, 16],
-    "Akward Shapes" : [29, 30, 41, 42],
+    "Awkward Shapes" : [29, 30, 41, 42],
     "L-Shapes" : [48, 47, 49, 50, 53, 54],
     "Lightning Bolts" : [7, 8, 11, 12, 39, 40],
     "No Edges Flipped Correctly" : [1,2,3,4,18,19,17,20],
@@ -154,7 +154,7 @@ var algsInfo = {
         "a2": "y' R' U2' R U R' U R",
     },
     28: {
-        "name": "Sleath",
+        "name": "Stealth",
         "a": "(r U R' U') M (U R U' R')",
         "a2": "",
     },

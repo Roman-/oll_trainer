@@ -120,7 +120,7 @@ function renderSelection()
     s += makeTr42("I-Shapes", "Squares");
     s += makeTr42("Fish-Shapes", "C-Shapes");
     s += makeTr42("Knight Move Shapes", "W-Shapes");
-    s += makeTr42("Akward Shapes", "Corners Correct, Edges Flipped");
+    s += makeTr42("Awkward Shapes", "Corners Correct, Edges Flipped");
     s += makeTrNormal("L-Shapes");
     s += makeTrNormal("Lightning Bolts");
     s += makeTrNormal("All Edges Oriented Correctly");
