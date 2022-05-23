@@ -1,6 +1,8 @@
 # OLL trainer
 ## https://bestsiteever.ru/oll/
 
+![oll trainer demo](demo.gif)
+
 The purpose of this project and its details are described on speedsolving forum in [this post](https://www.speedsolving.com/forum/threads/oll-trainer.66924/).  
 
 Contributing workflow
