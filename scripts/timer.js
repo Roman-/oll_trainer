@@ -32,9 +32,10 @@ function randomElement(arr)
 function confirmUnsel(i) {
     if (confirm("Do you want to unselect this case?")) {
         var index = window.selCases.indexOf(i);
-        if (index != -1)
+        if (index != -1) {
             window.selCases.splice(index, 1);
-        else
+            saveSelection();
+        } else
             document.getElementById("last_scramble").innerHTML = "wasn\'t  removed lol";
         document.getElementById("last_scramble").innerHTML = i + " was removed";
         showScramble();
