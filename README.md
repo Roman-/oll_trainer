@@ -1,5 +1,5 @@
 # OLL trainer
-## https://bestsiteever.ru/oll/
+## https://bestsiteever.net/oll/
 
 ![oll trainer demo](demo.gif)
 
