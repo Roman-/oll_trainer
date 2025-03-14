@@ -186,6 +186,12 @@ function displayTime() {
 
 /// handles keypup and keydown events. Starts timer etc.
 document.getElementById("bodyid").addEventListener("keydown", function(event) {
+
+    // prevent space scrolling
+    if (event.keyCode === 32) { 
+        event.preventDefault();
+    }
+
     // delete hotkey - remove last
     if (event.keyCode == 46 && !running)
     {
